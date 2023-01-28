@@ -1,0 +1,55 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+
+docker build -t techtrends .
+
+
+## Docker commands used to run the application
+# TODO: insert the docker run command
+
+docker run -d -p 7111:3111 techtrends
+
+
+## Docker commands used to get the application logs
+# TODO: insert the docker logs 
+
+docker logs 4d69f1de3066
+
+
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+
+PS C:\Users\mkosmiej\Documents\szkolenia\Udacity\nd064_course_1\project> docker logs 4d69f1de3066
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING 2023-01-27 09:19:37,003 -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO 2023-01-27 09:19:37,003 -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO 2023-01-27 09:20:35,288 - 172.17.0.1 - - [27/Jan/2023 09:20:35] "GET /metrics HTTP/1.1" 200 -
+INFO 2023-01-27 09:20:43,876 - 172.17.0.1 - - [27/Jan/2023 09:20:43] "GET / HTTP/1.1" 200 -
+INFO 2023-01-27 09:20:43,902 - 172.17.0.1 - - [27/Jan/2023 09:20:43] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG 2023-01-27 09:20:47,223 - Article 'KubeCon + CloudNativeCon 2021' is retrieved
+INFO 2023-01-27 09:20:47,234 - 172.17.0.1 - - [27/Jan/2023 09:20:47] "GET /2 HTTP/1.1" 200 -
+INFO 2023-01-27 09:20:47,263 - 172.17.0.1 - - [27/Jan/2023 09:20:47] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG 2023-01-27 09:20:57,650 - A non-existing article is accessed
+INFO 2023-01-27 09:20:57,669 - 172.17.0.1 - - [27/Jan/2023 09:20:57] "GET /11 HTTP/1.1" 404 -
+INFO 2023-01-27 09:20:57,703 - 172.17.0.1 - - [27/Jan/2023 09:20:57] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG 2023-01-27 09:21:00,620 - 'About Us' page is retrieved
+INFO 2023-01-27 09:21:00,625 - 172.17.0.1 - - [27/Jan/2023 09:21:00] "GET /about HTTP/1.1" 200 -
+DEBUG 2023-01-27 09:21:00,650 - 'About Us' page is retrieved
+INFO 2023-01-27 09:21:00,651 - 172.17.0.1 - - [27/Jan/2023 09:21:00] "GET /about HTTP/1.1" 200 -
+INFO 2023-01-27 09:21:00,684 - 172.17.0.1 - - [27/Jan/2023 09:21:00] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO 2023-01-27 09:21:04,243 - 172.17.0.1 - - [27/Jan/2023 09:21:04] "GET /create HTTP/1.1" 200 -
+INFO 2023-01-27 09:21:04,269 - 172.17.0.1 - - [27/Jan/2023 09:21:04] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG 2023-01-27 09:21:17,110 - A new article 'Marcin's first post' is created
+INFO 2023-01-27 09:21:17,111 - 172.17.0.1 - - [27/Jan/2023 09:21:17] "POST /create HTTP/1.1" 302 -
+INFO 2023-01-27 09:21:17,126 - 172.17.0.1 - - [27/Jan/2023 09:21:17] "GET / HTTP/1.1" 200 -
+INFO 2023-01-27 09:21:17,159 - 172.17.0.1 - - [27/Jan/2023 09:21:17] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG 2023-01-27 09:21:21,970 - Article 'Marcin's first post' is retrieved
+INFO 2023-01-27 09:21:21,971 - 172.17.0.1 - - [27/Jan/2023 09:21:21] "GET /7 HTTP/1.1" 200 -
+INFO 2023-01-27 09:21:22,008 - 172.17.0.1 - - [27/Jan/2023 09:21:22] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO 2023-01-27 09:21:23,746 - 172.17.0.1 - - [27/Jan/2023 09:21:23] "GET / HTTP/1.1" 200 -
+INFO 2023-01-27 09:21:23,775 - 172.17.0.1 - - [27/Jan/2023 09:21:23] "GET /static/css/main.css HTTP/1.1" 304 -
