@@ -3,5 +3,5 @@ data:
   version: latest
 kind: ConfigMap
 metadata:
-  name: techtrends-latest
+  name: techtrends
   namespace: sandbox
