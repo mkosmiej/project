@@ -5,9 +5,9 @@ metadata:
     app: techtrends
     tag: latest
   name: techtrends
-  namespace: sandbox
+  namespace:  {{ .Values.namespace.name }} 
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }} 
   selector:
     matchLabels:
       app: techtrends
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - image: mkosmiej/techtrends:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
         ports:
         - containerPort: 3111
@@ -34,9 +34,4 @@ spec:
              path: /healthz
              port: 3111
         resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+{{ toYaml .Values.resources | indent 12 }}
