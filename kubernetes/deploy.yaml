@@ -12,11 +12,6 @@ spec:
     matchLabels:
       app: techtrends
       tag: latest
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -24,7 +19,7 @@ spec:
         tag: latest
     spec:
       containers:
-      - image: techtrends:latest
+      - image: mkosmiej/techtrends:latest
         imagePullPolicy: IfNotPresent
         name: techtrends
         ports:
